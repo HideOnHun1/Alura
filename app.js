@@ -1,10 +1,11 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 let user = [];
+const regex = /[0-9]/gm;
 
 function agregarAmigo(){
-    console.dir(document.getElementById("amigo"));
+    //Validar que el campo no esté vacío y que no contenga números
     let name = document.getElementById("amigo").value;
-    if (name == ""){
+    if (name === "" || name.match(regex)){
         alert("Debes ingresar un nombre.")
     }else{
         user.push(name);
